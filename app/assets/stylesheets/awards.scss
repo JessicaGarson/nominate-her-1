@@ -21,6 +21,10 @@
 	padding: 1.5rem; 
 }
 
-p#notice {
+#notice {
 	display: none;
+}
+
+form div {
+	@extend .form-group;
 }

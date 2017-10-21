@@ -6,35 +6,9 @@
   <hr class="my-4">
   <p>Help make this list more complete! If you know of an award not listed here, let us know.</p>
   <p class="lead">
-    <a class="btn btn-primary btn-lg" href="#" role="button">Add an award</a>
+    <a class="btn btn-primary btn-lg" href=<%= new_award_path %>>Add an award</a>
   </p>
 </div>
-
-<!-- <table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Nomination close date</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @awards.each do |award| %>
-      <tr>
-        <td><%= award.name %></td>
-        <td><%= award.description %></td>
-        <td><%= award.nomination_close_date %></td>
-        <td><%= link_to 'Show', award %></td>
-        <td><%= link_to 'Edit', edit_award_path(award) %></td>
-        <td><%= link_to 'Destroy', award, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table> -->
-
-
 
 
 <section class="container-fluid card-holder">
@@ -42,7 +16,7 @@
   <% @awards.each do |award| %>
     <div class="col-sm-6 col-lg-4">
       <div class="card card-block">
-      <h2><%= award.name %></h2>
+      <h2><a href="#"><%= award.name %></a></h2>
       <p><%= award.description %></p>
       <p><%= award.nomination_close_date %></p>
       <ul class="list-inline">
@@ -57,7 +31,3 @@
   </div>
 <section>
 
-
-<br>
-
-<%= link_to 'New Award', new_award_path %>
