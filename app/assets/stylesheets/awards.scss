@@ -1,3 +1,26 @@
 // Place all the styles related to the awards controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.jumbotron {
+	margin-bottom: 0;
+	text-align: center;
+	background-color: $gray-900;
+	color: #ffffff;
+	border-radius: 0;
+}
+
+.card-holder {
+	background: linear-gradient(#33ccff, #00ffff);
+	padding-top: 2rem;
+	padding-bottom: 2rem; 
+}
+
+.card-block {
+	padding: 1.5rem; 
+}
+
+p#notice {
+	display: none;
+}
