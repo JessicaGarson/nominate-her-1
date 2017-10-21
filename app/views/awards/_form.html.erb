@@ -1,0 +1,32 @@
+<%= form_with(model: award, local: true) do |form| %>
+  <% if award.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(award.errors.count, "error") %> prohibited this award from being saved:</h2>
+
+      <ul>
+      <% award.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :award_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description, id: :award_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nomination_close_date %>
+    <%= form.text_field :nomination_close_date, id: :award_nomination_close_date %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
