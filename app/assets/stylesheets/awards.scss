@@ -2,29 +2,42 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
 .jumbotron {
-	margin-bottom: 0;
-	text-align: center;
-	background-color: $gray-900;
-	color: #ffffff;
-	border-radius: 0;
+    background-color: $gray-900;
+    border-radius: 0;
+    color: #ffffff;
+    margin-bottom: 0;
+    text-align: center;
 }
 
-.card-holder {
-	background: linear-gradient(#33ccff, #00ffff);
-	padding-top: 2rem;
-	padding-bottom: 2rem; 
+.card-holder-awards {
+    background: linear-gradient($blue, $cyan);
+    padding-top: $grid-gutter-width;
+    padding-bottom: $grid-gutter-width;
+    padding-left: $grid-gutter-width;
+    padding-right: $grid-gutter-width;
+    .card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+		grid-gap: $grid-gutter-width;
+    }
+    .deadline {
+    	color: $blue;
+    	display: block;
+    	font-size: 80%;
+    	font-weight: bold;
+    	letter-spacing: 0.05em;
+    	text-transform: uppercase;
+    }
 }
 
-.card-block {
-	padding: 1.5rem; 
+
+.card-footer {
+    .list-inline {
+        margin-bottom: 0;
+    }
 }
 
 #notice {
-	display: none;
-}
-
-form div {
-	@extend .form-group;
+    display: none;
 }

@@ -1,33 +1,35 @@
 <p id="notice"><%= notice %></p>
 
 <div class="jumbotron">
-  <h1 class="display-3">Nominate Her</h1>
-  <p class="lead">This is a collaborative list of awards that women in tech could get nominated for. I won an award once, and it was a pivotal moment for me in my career. I would like more women to experience this feeling.</p>
-  <hr class="my-4">
-  <p>Help make this list more complete! If you know of an award not listed here, let us know.</p>
-  <p class="lead">
+    <h1 class="display-3">Nominate Her</h1>
+    <p class="lead">This is a collaborative list of awards that women in tech could get nominated for. I won an award once, and it was a pivotal moment for me in my career. I would like more women to experience this feeling.</p>
+    <hr class="my-4">
+    <p>Help make this list more complete! If you know of an award not listed here, let us know.</p>
+    <p class="lead">
     <a class="btn btn-primary btn-lg" href=<%= new_award_path %>>Add an award</a>
-  </p>
+    </p>
 </div>
 
 
-<section class="container-fluid card-holder">
-  <div class="row">
-  <% @awards.each do |award| %>
-    <div class="col-sm-6 col-lg-4">
-      <div class="card card-block">
-      <h2><a href="#"><%= award.name %></a></h2>
-      <p><%= award.description %></p>
-      <p><%= award.nomination_close_date %></p>
-      <ul class="list-inline">
-        <li class="list-inline-item"><%= link_to 'Show', award %></li>
-        <li class="list-inline-item"><%= link_to 'Edit', edit_award_path(award) %></li>
-        <li class="list-inline-item"><%= link_to 'Destroy', award, method: :delete, data: { confirm: 'Are you sure?' } %></li>
-      </ul>
-
-      </div>
+<section class="card-holder-awards">
+    <div class="card-grid">
+        <% @awards.each do |award| %>
+            <div class="card"> 
+                <div class="card-body">
+                    <h2><a href="<%= award.link %>" target="blank"><%= award.name %></a></h2>
+                    <p><%= award.description %></p>
+                    <p><span class="deadline">Application deadline</span> <%= award.nomination_close_date %></p>
+                </div>
+                <div class="card-footer">
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><%= link_to 'Show', award %></li>
+                        <li class="list-inline-item"><%= link_to 'Edit', edit_award_path(award) %></li>
+                        <li class="list-inline-item"><%= link_to 'Destroy', award, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+                    </ul>
+                </div>
+            </div>
+        <% end %>
+        </div>
     </div>
-  <% end %>
-  </div>
 <section>
 
