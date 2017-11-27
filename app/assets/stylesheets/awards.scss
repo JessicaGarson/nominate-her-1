@@ -30,3 +30,15 @@
     	text-transform: uppercase;
     }
 }
+
+
+.card-footer {
+    .list-inline {
+        margin-bottom: 0;
+        display: none;
+    }
+}
+
+#notice {
+    display: none;
+}
