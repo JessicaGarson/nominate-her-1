@@ -2,11 +2,11 @@
 
 <div class="jumbotron">
     <h1 class="display-3">Nominate Her</h1>
-    <p class="lead">This is a collaborative list of awards that women in tech could get nominated for. I won an award once, and it was a pivotal moment for me in my career. I would like more women to experience this feeling.</p>
+    <p class="lead">This is a collaborative list of awards that women in tech could get nominated for. This site was started by Jessica Garson who won an award once. She wanted more women to experience this feeling. This was later carried on as a project of <a href="https://techladyhackathon.org/">The Tech Lady Hackathon.</a> in Washington, DC.</p>
     <hr class="my-4">
     <p>Help make this list more complete! If you know of an award not listed here, let us know.</p>
     <p class="lead">
-    <a class="btn btn-primary btn-lg" href=<%= new_award_path %>>Add an award</a>
+    <a class="btn btn-primary btn-lg" href=<%= new_award_path %>>Add an Award</a>
     </p>
 </div>
 
@@ -14,7 +14,7 @@
 <section class="card-holder-awards">
     <div class="card-grid">
         <% @awards.each do |award| %>
-            <div class="card"> 
+            <div class="card">
                 <div class="card-body">
                     <h2><a href="<%= award.link %>" target="blank"><%= award.name %></a></h2>
                     <p><%= award.description %></p>
@@ -31,5 +31,4 @@
         <% end %>
         </div>
     </div>
-<section>
-
+</section>
