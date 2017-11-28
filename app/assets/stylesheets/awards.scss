@@ -12,14 +12,16 @@ a {
     border-radius: 0;
     color: #ffffff;
     margin-bottom: 0;
-    h1 {
-        // margin-bottom: 1rem;
+    h1, h2 {
         line-height: 1.1;
+        @include media-breakpoint-up(sm) {
+            font-size: 4.5rem;
+        }
+    }
+    h1 {
         font-weight: bold;
     }
     h2 {
-        // font-weight: bold;
-        line-height: 1.1;
         color: $blue-light;
     }
     .lead {
