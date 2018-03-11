@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<%= @award.inspect %>
 <div class="header">
     <div class="container">
         <%= link_to 'Nominate Her', awards_path %>
@@ -51,5 +51,3 @@
 
 <%= link_to 'Edit Award Details', edit_award_path(@award), class: 'btn btn-primary btn-lg mb-5'  %>
 </div>
-
-
